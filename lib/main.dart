@@ -6,10 +6,10 @@ void main() {
 
 class BusnissCardApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Color(0xff23445d),
+    return MaterialApp( home: Scaffold(
+        backgroundColor: Color(0xff2B475E),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 122,
@@ -31,77 +31,83 @@ class BusnissCardApp extends StatelessWidget {
             Text(
               "FLUTTER DEVELOPER",
               style: TextStyle(
-                color: const Color.fromARGB(255, 177, 171, 171),
+                color: const Color(0xff6c8090),
                 fontSize: 23,
               ),
             ),
-            // Padding(
-            //   // padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-            // ),
-            Container(
-              width: 220,
-              height: 40,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
+            Divider(
+              color: const Color(0xff6c8090),
+              thickness: 1,
+              indent: 30,
+              endIndent: 30,
+              height: 5,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 2, horizontal: 16),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
                 ),
-              ),
-              child: Row(
-                children: [
-                  Image(
-                    image: AssetImage(
-                      "Images/call.png",
+                height: 55,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Icon(
+                        Icons.phone,
+                        size: 40,
+                        color: Color(0xff2B475E),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                  ),
-                  Text(
-                    "(+962) 797493629",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 22),
+                      child: Text(
+                        "(+962) 797493629",
+                        style: TextStyle(
+                          color: Color(0xff2B475E),
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-              width: 250,
-              height: 40,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 16),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                height: 55,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Icon(
+                        Icons.mail,
+                        size: 40,
+                        color: Color(0xff2B475E),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 22),
+                      child: Text(
+                        "asem.vip10@gmail.com",
+                        style: TextStyle(
+                          color: Color(0xff2B475E),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              child: Row(
-                children: [
-                  Image(
-                    image: AssetImage(
-                      "Images/mail.png",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                  ),
-                  Text(
-                    "asem.vip10@gmail.com",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                    ),
-                  ),
-                ],
-              ),
-            )
+            ),
           ],
         ),
-      ),
-    );
+      ),);
   }
 }
