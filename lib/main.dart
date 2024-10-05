@@ -1,79 +1,86 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BusnissCardApp());
+  runApp(BasketballCounterApp());
 }
 
-class BusnissCardApp extends StatelessWidget {
+class BasketballCounterApp extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xff2B475E),
+        appBar: AppBar(
+          backgroundColor: Colors.orange,
+          title: const Text(
+            "Points Counter",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 122,
-              backgroundColor: Colors.white,
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                radius: 120,
-                backgroundImage: AssetImage("Images/logo.png"),
-              ),
-            ),
-            Text(
-              "Asem Alkurdi",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
-                fontFamily: "Pacifico",
-              ),
-            ),
-            Text(
-              "FLUTTER DEVELOPER",
-              style: TextStyle(
-                color: Color(0xff6c8090),
-                fontSize: 23,
-              ),
-            ),
-            Divider(
-              color: Color(0xff6c8090),
-              thickness: 1,
-              indent: 30,
-              endIndent: 30,
-              height: 5,
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              child: ListTile(
-                leading: Icon(
-                  Icons.phone,
-                  color: Color(0xff2B475E),
+            const Padding(padding: EdgeInsets.only(top: 20)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    const Text(
+                      "Team A",
+                      style: TextStyle(fontSize: 35),
+                    ),
+                    const Text(
+                      "0",
+                      style: TextStyle(fontSize: 150),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Add 1 Point'),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Add 2 Point'),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Add 3 Point'),
+                    ),
+                  ],
                 ),
-                title: Text(
-                  "(+962) 797493629",
-                  style: TextStyle(
-                    color: Color(0xff2B475E),
-                    fontSize: 20,
-                  ),
+                const VerticalDivider(
+                  color: Color.fromARGB(157, 0, 0, 0),
+                  width: 30,
+                  thickness: 10,
                 ),
-              ),
+                Column(
+                  children: [
+                    const Text(
+                      "Team B",
+                      style: TextStyle(fontSize: 35),
+                    ),
+                    const Text(
+                      "0",
+                      style: TextStyle(fontSize: 150),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Add 1 Point'),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Add 2 Point'),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Add 3 Point'),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            Card(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              child: ListTile(
-                leading: Icon(
-                  Icons.mail,
-                  color: Color(0xff2B475E),
-                ),
-                title: Text(
-                  "asem.vip10@gmail.com",
-                  style: TextStyle(
-                    color: Color(0xff2B475E),
-                    fontSize: 20,
-                  ),
-                ),
-              ),
+            const Padding(padding: EdgeInsets.only(top: 50)),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Reset'),
             ),
           ],
         ),
