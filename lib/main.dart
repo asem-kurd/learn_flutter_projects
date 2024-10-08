@@ -19,7 +19,7 @@ class BasketballCounterApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            const Padding(padding: EdgeInsets.only(top: 20)),
+            const Padding(padding: EdgeInsets.only(top: 70)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -88,7 +88,7 @@ class BasketballCounterApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                const VerticalDivider(),
+                SizedBox(height: 350, child: const VerticalDivider()),
                 Column(
                   children: [
                     const Text(
