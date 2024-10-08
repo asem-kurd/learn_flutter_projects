@@ -8,6 +8,7 @@ class BasketballCounterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.orange,
@@ -20,7 +21,7 @@ class BasketballCounterApp extends StatelessWidget {
           children: [
             const Padding(padding: EdgeInsets.only(top: 20)),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   children: [
@@ -32,25 +33,62 @@ class BasketballCounterApp extends StatelessWidget {
                       "0",
                       style: TextStyle(fontSize: 150),
                     ),
-                    TextButton(
+                    // Spacer(
+                    //   flex: 1,
+                    // ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                       onPressed: () {},
-                      child: const Text('Add 1 Point'),
+                      child: const Text(
+                        'Add 1 Point',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
-                    TextButton(
+                    const Padding(padding: EdgeInsets.only(top: 10)),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                       onPressed: () {},
-                      child: const Text('Add 2 Point'),
+                      child: const Text(
+                        'Add 2 Point',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
-                    TextButton(
+                    const Padding(padding: EdgeInsets.only(top: 10)),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                       onPressed: () {},
-                      child: const Text('Add 3 Point'),
+                      child: const Text(
+                        'Add 3 Point',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
                   ],
                 ),
-                const VerticalDivider(
-                  color: Color.fromARGB(157, 0, 0, 0),
-                  width: 30,
-                  thickness: 10,
-                ),
+                const VerticalDivider(),
                 Column(
                   children: [
                     const Text(
@@ -61,26 +99,76 @@ class BasketballCounterApp extends StatelessWidget {
                       "0",
                       style: TextStyle(fontSize: 150),
                     ),
-                    TextButton(
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                       onPressed: () {},
-                      child: const Text('Add 1 Point'),
+                      child: const Text(
+                        'Add 1 Point',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
-                    TextButton(
+                    const Padding(padding: EdgeInsets.only(top: 10)),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                       onPressed: () {},
-                      child: const Text('Add 2 Point'),
+                      child: const Text(
+                        'Add 2 Point',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
-                    TextButton(
+                    const Padding(padding: EdgeInsets.only(top: 10)),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
                       onPressed: () {},
-                      child: const Text('Add 3 Point'),
+                      child: const Text(
+                        'Add 3 Point',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
             const Padding(padding: EdgeInsets.only(top: 50)),
-            TextButton(
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+              ),
               onPressed: () {},
-              child: const Text('Reset'),
+              child: const Text(
+                'Reset',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
           ],
         ),
